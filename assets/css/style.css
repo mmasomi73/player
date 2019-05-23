@@ -826,9 +826,12 @@ filter: blur(3px);
     margin-right: 20px;
     position: relative;
     height: 52px;
+    -webkit-transition: 0.5s; /* Safari */
+    transition: 0.5s;
 }
 .track.enable{
     border: 2px solid rgba(255, 255, 255, 0.75) !important  ;
+    background: #ffffff42;
 }
 .track:hover{
     border: 1px solid rgba(255, 255, 255, 0.62);
@@ -908,4 +911,151 @@ filter: blur(3px);
     right: 0;
     bottom: 0;
     top: 35px;
+}
+.player .controller{
+    position: absolute;
+    height: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    direction: ltr;
+}
+
+.player .controller .prev,
+.player .controller .pause,
+.player .controller .play,
+.player .controller .stop,
+.player .controller .next
+{
+    width: 30px;
+    height: 50px;
+    background-size: contain;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 5px;
+    cursor: pointer;
+    opacity: 0.5;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.player .controller .play{
+    width: 50px;
+    height: 50px;
+    background-image: url(../icons/play.png);
+}
+.player .controller .stop{
+    background-image: url(../icons/stop.png);
+}
+.player .controller .pause{
+    background-image: url(../icons/pause.png);
+}
+.player .controller .next{
+    background-image: url(../icons/forward.png);
+}
+.player .controller .prev{
+    background-image: url(../icons/backward.png);
+}
+.player .controller .prev:hover,
+.player .controller .pause:hover,
+.player .controller .play:hover,
+.player .controller .stop:hover,
+.player .controller .next:hover
+{
+    opacity: 1;
+}
+
+.virtualizer{
+    position: relative;
+    direction: ltr;
+    position: absolute;
+    direction: ltr;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 60px;
+}
+.virtualizer .cover{
+    position: absolute;
+    left: calc(50% - 75px);
+    top: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius:5px;
+    background-size: cover;
+    background-image: url(../icons/cover.png);
+    filter: grayscale(0.5);
+    opacity: 0.7;
+}
+
+.virtualizer .title{
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    font-size: 12px;
+    max-width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: ltr;
+    text-align: left;
+}
+.virtualizer .timer{
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    font-size: 12px;
+}
+
+.spectrum{
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 40px;
+}
+.controller .en{
+    opacity: 1 !important;
+}
+.seekbar{
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 20px;
+    height: 12px;
+    cursor: pointer;
+}
+
+.bar{
+    background: rgba(240, 248, 255, 0.4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.prog{
+    background: rgba(240, 248, 255, 0.8);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -1px;
+    height: 4px;
+    border-radius: 3px;
+    width: 0;
+    -webkit-transition: 1.25s; /* Safari */
+    transition: 1.25s;
+}
+.pointer{
+    position: absolute;
+    right: 0;
+    height: 8px;
+    width: 8px;
+    background: aliceblue;
+    border-radius: 50%;
+    top: -2px;
+    cursor: pointer;
+    box-shadow: 0 0 3px 2px #fff;
 }
