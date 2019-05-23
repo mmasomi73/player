@@ -52,7 +52,21 @@ $(document).ready(function() {
     });
 
     //-----= Controllers
-    wavesurfer.load('mp3/1.mp3');
+        //-----= Collector
+        $('.track').click(function () {
+            $('.track').removeClass('enable');
+            $(this).addClass('enable');
+            wavesurfer.load('mp3/'+$(this).data('src'));
+            $('.virtualizer .cover').attr('style',$(this).find('.cover').attr('style'));
+            wavesurfer.on('ready', function () {
+                wavesurfer.play();
+                $('.controller .en').removeClass('en');
+                $('.play').addClass('en');
+            });
+
+        });
+
+        //-----= Control
     $('.play').click(function () {
         $('.controller .en').removeClass('en');
         $(this).addClass('en');
