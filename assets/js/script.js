@@ -30,6 +30,7 @@ $(document).ready(function() {
         cursorColor:'#fff',
         audioRate:1,
         height:100,
+        skipLength:5,
         barGap:3,
         barWidth:3,
         cursorWidth:0,
@@ -59,6 +60,7 @@ $(document).ready(function() {
             wavesurfer.load('mp3/'+$(this).data('src'));
             $('.virtualizer .cover').attr('style',$(this).find('.cover').attr('style'));
             wavesurfer.on('ready', function () {
+
                 wavesurfer.play();
                 $('.controller .en').removeClass('en');
                 $('.play').addClass('en');
@@ -81,6 +83,48 @@ $(document).ready(function() {
         $('.controller .en').removeClass('en');
         $(this).addClass('en');
         wavesurfer.stop();
+    });
+    $('.volume').click(function () {
+        $('.controller .en').removeClass('en');
+        $(this).addClass('en');
+
+        if($(this).hasClass('mute')){
+            $(this).removeClass('mute');
+            wavesurfer.setMute(false);
+
+        }else{
+            $(this).addClass('mute');
+            wavesurfer.setMute(true);
+        }
+
+    });
+    $('.controller .repeat').click(function () {
+        $('.controller .en').removeClass('en');
+        $(this).addClass('en');
+
+        if($(this).hasClass('on')){
+            $(this).removeClass('on');
+            wavesurfer.on('finish', function () {
+                wavesurfer.stop();
+            });
+
+        }else{
+            $(this).addClass('on');
+            wavesurfer.on('finish', function () {
+                wavesurfer.play();
+            });
+        }
+
+    });
+    $('.next').click(function () {
+        $('.controller .en').removeClass('en');
+        $(this).addClass('en');
+        wavesurfer.skipForward();
+    });
+    $('.prev').click(function () {
+        $('.controller .en').removeClass('en');
+        $(this).addClass('en');
+        wavesurfer.skipBackward();
     });
 
     //-----= Events

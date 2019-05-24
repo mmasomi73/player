@@ -926,7 +926,9 @@ filter: blur(3px);
 .player .controller .pause,
 .player .controller .play,
 .player .controller .stop,
-.player .controller .next
+.player .controller .next,
+.player .controller .volume,
+.player .controller .repeat
 {
     width: 30px;
     height: 50px;
@@ -958,18 +960,42 @@ filter: blur(3px);
 .player .controller .prev{
     background-image: url(../icons/backward.png);
 }
+.player .controller .repeat{
+    background-image: url(../icons/loop-off.png);
+    position: absolute;
+    left: 30px;
+    width: 20px;
+    height: 50px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.player .controller .repeat.on{
+    background-image: url(../icons/loop-on.png);
+}
+.player .controller .volume{
+    background-image: url(../icons/volume.png);
+    position: absolute;
+    right: 30px;
+    width: 20px;
+    height: 50px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.player .controller .volume.mute{
+    background-image: url(../icons/mute.png);
+}
 .player .controller .prev:hover,
 .player .controller .pause:hover,
 .player .controller .play:hover,
 .player .controller .stop:hover,
-.player .controller .next:hover
+.player .controller .next:hover,
+.player .controller .volume:hover,
+.player .controller .repeat:hover
 {
     opacity: 1;
 }
 
 .virtualizer{
-    position: relative;
-    direction: ltr;
     position: absolute;
     direction: ltr;
     left: 0;
@@ -1027,7 +1053,7 @@ filter: blur(3px);
     cursor: pointer;
 }
 
-.bar{
+.seekbar .bar{
     background: rgba(240, 248, 255, 0.4);
     position: absolute;
     left: 0;
@@ -1036,7 +1062,7 @@ filter: blur(3px);
     border-radius: 3px;
     cursor: pointer;
 }
-.prog{
+.seekbar .prog{
     background: rgba(240, 248, 255, 0.8);
     position: absolute;
     left: 0;
@@ -1048,7 +1074,7 @@ filter: blur(3px);
     -webkit-transition: 1.25s; /* Safari */
     transition: 1.25s;
 }
-.pointer{
+.seekbar .pointer{
     position: absolute;
     right: 0;
     height: 8px;
