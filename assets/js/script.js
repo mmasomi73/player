@@ -174,6 +174,6 @@ $(document).ready(function() {
         $('.prog').css('width',((clkX/relX)*100)+'%');
         wavesurfer.seekTo((clkX/relX));
     });
-    
+
 
 });

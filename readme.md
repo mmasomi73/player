@@ -3,7 +3,7 @@
 -------------------------
 Themed Music Player Based On **[wavesurfer.js](https://wavesurfer-js.org/)**
 
-`Dropzone.js` Customize for Upload Image To Laravel backend and Compress Image Size with `Intervention\Image` 
+
 ![Player UI](http://play.mmasomi.ir/cover/snapshot.jpg) 
 
 ## Controller
