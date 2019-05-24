@@ -54,19 +54,20 @@ $(document).ready(function() {
 
     //-----= Controllers
         //-----= Collector
-        $('.track').click(function () {
-            $('.track').removeClass('enable');
-            $(this).addClass('enable');
-            wavesurfer.load('mp3/'+$(this).data('src'));
-            $('.virtualizer .cover').attr('style',$(this).find('.cover').attr('style'));
-            wavesurfer.on('ready', function () {
+    $('.track').click(function () {
+        $('.track').removeClass('enable');
+        $(this).addClass('enable');
+        $('.player .title').text($(this).find('.title').text());
+        wavesurfer.load('mp3/'+$(this).data('src'));
+        $('.virtualizer .cover').attr('style',$(this).find('.cover').attr('style'));
+        wavesurfer.on('ready', function () {
 
-                wavesurfer.play();
-                $('.controller .en').removeClass('en');
-                $('.play').addClass('en');
-            });
-
+            wavesurfer.play();
+            $('.controller .en').removeClass('en');
+            $('.play').addClass('en');
         });
+
+    });
 
         //-----= Control
     $('.play').click(function () {
@@ -127,6 +128,19 @@ $(document).ready(function() {
         wavesurfer.skipBackward();
     });
 
+    //-----= PlayList
+    $('.playlist-header .items').text('Items '+$('.track').length);
+        //-----= First Init
+    var first = $('.track').first();
+    $('.track').removeClass('enable');
+    $(first).addClass('enable');
+    $('.player .title').text($(first).find('.title').text());
+    wavesurfer.load('mp3/'+$(first).data('src'));
+    $('.virtualizer .cover').attr('style',$(first).find('.cover').attr('style'));
+    wavesurfer.on('ready', function () {
+        $('.controller .en').removeClass('en');
+        $('.play').addClass('en');
+    });
     //-----= Events
         //-----= Timer & SeekBar
     setInterval(function(){
