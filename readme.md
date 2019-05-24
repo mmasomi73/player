@@ -3,6 +3,7 @@
 -------------------------
 Themed Music Player Based On **[wavesurfer.js](https://wavesurfer-js.org/)**
 
+[Online Demo](http://play.mmasomi.ir)
 
 ![Player UI](http://play.mmasomi.ir/cover/snapshot.jpg) 
 
