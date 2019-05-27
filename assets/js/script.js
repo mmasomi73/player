@@ -31,8 +31,8 @@ $(document).ready(function() {
         audioRate:1,
         height:100,
         skipLength:5,
-        barGap:3,
-        barWidth:3,
+        barGap:5,
+        barWidth:2,
         cursorWidth:0,
 
         plugins: [

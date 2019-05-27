@@ -1085,3 +1085,47 @@ filter: blur(3px);
     cursor: pointer;
     box-shadow: 0 0 3px 2px #fff;
 }
+
+.volume .level-box{
+    background: transparent;
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: 0.5s; /* Safari */
+    transition: 0.5s;
+}
+
+.volume:hover .level-box{
+    opacity: 1;
+}
+
+.volume .level-box .level{
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    top: 24px;
+    border-radius: 3px;
+}
+.volume .level-box .level .set{
+    height: 2px;
+    background: #fff;
+    width: 0;
+    border-radius: 3px;
+    -webkit-transition: 0.5s; /* Safari */
+    transition: 0.5s;
+}
+
+.volume .level-box .level .set .pointer{
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    top: -3px;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+}
