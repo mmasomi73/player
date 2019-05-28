@@ -60,9 +60,10 @@ $(document).ready(function() {
         $(this).addClass('enable');
         $('.player .title').text($(this).find('.title').text());
         wavesurfer.load('mp3/'+$(this).data('src'));
-        $('.virtualizer .cover').attr('style',$(this).find('.cover').attr('style'));
+        $('.virtualizer .cover').addClass('loading');
+        var cover = $(this).find('.cover').attr('style');
         wavesurfer.on('ready', function () {
-
+            $('.virtualizer .cover').attr('style',cover).removeClass('loading');
             wavesurfer.play();
             $('.controller .en').removeClass('en');
             $('.play').addClass('en');
@@ -124,9 +125,11 @@ $(document).ready(function() {
     $(first).addClass('enable');
     $('.player .title').text($(first).find('.title').text());
     wavesurfer.load('mp3/'+$(first).data('src'));
-    $('.virtualizer .cover').attr('style',$(first).find('.cover').attr('style'));
+    $('.virtualizer .cover').addClass('loading');
+    var cover = $(first).find('.cover').attr('style');
     wavesurfer.on('ready', function () {
         $('.controller .en').removeClass('en');
+        $('.virtualizer .cover').attr('style',cover).removeClass('loading');
         $('.play').addClass('en');
     });
     //-----= Events

@@ -1019,6 +1019,16 @@ filter: blur(3px);
     opacity: 0.7;
 }
 
+.virtualizer .cover.loading{
+    background-image: unset !important;
+}
+.virtualizer .cover .loader{
+    display: none;
+}
+.virtualizer .cover.loading .loader{
+    display: block;
+}
+
 .virtualizer .title{
     position: absolute;
     left: 30px;
