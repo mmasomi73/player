@@ -927,7 +927,7 @@ filter: blur(3px);
 .player .controller .play,
 .player .controller .stop,
 .player .controller .next,
-/*.player .controller .volume,*/
+.player .controller .plist,
 .player .controller .repeat
 {
     width: 30px;
@@ -947,6 +947,18 @@ filter: blur(3px);
     width: 50px;
     height: 50px;
     background-image: url(../icons/play.png);
+}
+.player .controller .plist{
+    background-image: url(../icons/playlist.png);
+    position: absolute;
+    right: 30px;
+    width: 20px;
+    height: 50px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    display: none;
+    opacity: 0;
+    z-index: -1;
 }
 .player .controller .stop{
     background-image: url(../icons/stop.png);
