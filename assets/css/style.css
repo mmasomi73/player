@@ -927,7 +927,7 @@ filter: blur(3px);
 .player .controller .play,
 .player .controller .stop,
 .player .controller .next,
-.player .controller .volume,
+/*.player .controller .volume,*/
 .player .controller .repeat
 {
     width: 30px;
@@ -972,17 +972,20 @@ filter: blur(3px);
 .player .controller .repeat.on{
     background-image: url(../icons/loop-on.png);
 }
+/*.player .controller .volume{*/
+    /*!*background-image: url(../icons/volume.png);*!*/
+    /*position: absolute;*/
+    /*right: 30px;*/
+    /*width: 20px;*/
+    /*height: 50px;*/
+    /*-webkit-transition: 0.5s;*/
+    /*transition: 0.5s;*/
+/*}*/
 .player .controller .volume{
-    background-image: url(../icons/volume.png);
     position: absolute;
     right: 30px;
-    width: 20px;
-    height: 50px;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-}
-.player .controller .volume.mute{
-    background-image: url(../icons/mute.png);
+    top: 5px;
+
 }
 .player .controller .prev:hover,
 .player .controller .pause:hover,

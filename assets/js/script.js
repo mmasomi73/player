@@ -1,6 +1,7 @@
 $('input[type="text"]').focus(function () {
     $( "<div class='input-border'></div>" )
 });
+var wavesurfer = '';
 $(document).ready(function() {
     // Waves.attach('.waves-float', ['waves-float']);
     // Waves.attach('.waves-circle', ['waves-circle']);
@@ -23,7 +24,7 @@ $(document).ready(function() {
     });
 
     //------------------Player
-    var wavesurfer = WaveSurfer.create({
+    wavesurfer = WaveSurfer.create({
         container: '.spectrum',
         waveColor:'#ffffff5e',
         progressColor:'#fff',
@@ -85,20 +86,7 @@ $(document).ready(function() {
         $(this).addClass('en');
         wavesurfer.stop();
     });
-    $('.volume').click(function () {
-        $('.controller .en').removeClass('en');
-        $(this).addClass('en');
 
-        if($(this).hasClass('mute')){
-            $(this).removeClass('mute');
-            wavesurfer.setMute(false);
-
-        }else{
-            $(this).addClass('mute');
-            wavesurfer.setMute(true);
-        }
-
-    });
     $('.controller .repeat').click(function () {
         $('.controller .en').removeClass('en');
         $(this).addClass('en');
@@ -175,5 +163,9 @@ $(document).ready(function() {
         wavesurfer.seekTo((clkX/relX));
     });
 
-
 });
+function setVolume(xb1,xb2,xf2) {
+    var volume = (xf2 - xb1)/(xb2 - xb1);
+    console.log(volume);
+    wavesurfer.setVolume(volume);
+}

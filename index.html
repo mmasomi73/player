@@ -15,6 +15,7 @@
     <link href="vendor/fontawesome-5.0.9/css/fontawesome-all.min.css" rel="stylesheet">
     <link href="vendor/fontawesome-5.0.9/css/fontawesome.css" rel="stylesheet">
     <link href="vendor/Waves/waves.min.css" rel="stylesheet">
+    <link href="vendor/volume/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Custom styles for this template -->
     <style>
@@ -62,8 +63,8 @@
                         <div class="title">To Ke Maroufi</div>
                         <div class="time">03:56</div>
                         <div class="action">
-                            <div class="share"></div>
-                            <div class="fav"></div>
+                            <div class="share waves-effect"></div>
+                            <div class="fav waves-effect"></div>
                         </div>
                     </div>
 
@@ -83,6 +84,17 @@
                         <div class="artist">Yaram Bash</div>
                         <div class="title">Mohammad Alizadeh</div>
                         <div class="time">03:33</div>
+                        <div class="action">
+                            <div class="share"></div>
+                            <div class="fav"></div>
+                        </div>
+                    </div>
+
+                    <div class="track" data-src="Kako Band - Invite.mp3">
+                        <div class="cover" style="background-image: url(https://i1.sndcdn.com/artworks-000542116962-nhbes8-t200x200.jpg);"></div>
+                        <div class="artist">Hoco Hoco</div>
+                        <div class="title">KaKo Band</div>
+                        <div class="time">04:01</div>
                         <div class="action">
                             <div class="share"></div>
                             <div class="fav"></div>
@@ -110,19 +122,32 @@
                     </div>
                 </div>
                 <div class="controller">
-                    <div class="repeat"></div>
-                    <div class="prev"></div>
-                    <div class="pause"></div>
-                    <div class="play"></div>
-                    <div class="stop"></div>
-                    <div class="next"></div>
+                    <div class="repeat waves-effect"></div>
+                    <div class="prev waves-effect"></div>
+                    <div class="pause waves-effect"></div>
+                    <div class="play waves-effect"></div>
+                    <div class="stop waves-effect"></div>
+                    <div class="next waves-effect"></div>
                     <div class="volume">
-                        <div class="level-box">
-                            <div class="level">
-                                <div class="set">
-                                    <div class="pointer"></div>
-                                </div>
-                            </div>
+                        <div class="speaker" >
+                            <svg viewBox="0 0 100 77" xmlns="http://www.w3.org/2000/svg">
+                                <path id="speakB" class="volElem" stroke="#fff" d="M51.2,18.5v-13c0-2.1-2.5-3.3-4.1-1.9L21.8,25.9c-1.4,1.2-3.1,1.9-4.9,1.9H8.2c-2.3,0-4.2,1.9-4.2,4.2v13.3c0,2.3,1.9,4.2,4.2,4.2H17c1.9,0,3.7,0.7,5.1,1.9l25,22c1.6,1.4,4.1,0.3,4.1-1.9v-13" opacity="0.4"/>
+                                <path id="speakF" class="volElem" stroke="#fff" d="M51.2,18.5v-13c0-2.1-2.5-3.3-4.1-1.9L21.8,25.9c-1.4,1.2-3.1,1.9-4.9,1.9H8.2c-2.3,0-4.2,1.9-4.2,4.2v13.3c0,2.3,1.9,4.2,4.2,4.2H17c1.9,0,3.7,0.7,5.1,1.9l25,22c1.6,1.4,4.1,0.3,4.1-1.9v-13"/>
+                                <path id="arcBigB" class="volElem" stroke="#fff" d="M72.2,64.1C81.1,59,87,49.4,87,38.5c0-10.9-5.9-20.5-14.8-25.6" opacity="0.4"/>
+                                <path id="arcBigF" class="volElem" stroke="#fff" d="M72.2,64.1C81.1,59,87,49.4,87,38.5c0-10.9-5.9-20.5-14.8-25.6"/>
+                                <path id="arcSmB" class="volElem" stroke="#fff" d="M59,51.3c4.4-2.6,7.4-7.4,7.4-12.8s-3-10.3-7.4-12.8" opacity="0.4" />
+                                <path id="arcSmF" class="volElem" stroke="#fff" d="M59,51.3c4.4-2.6,7.4-7.4,7.4-12.8s-3-10.3-7.4-12.8"/>
+                                <line id="crossLtRb" class="volElem" opacity="0.6" stroke="#fff" x1="43.8" y1="29.2" x2="62.6" y2="47.8" transform="scale(0)" />
+                                <line id="crossLbRt" class="volElem" opacity="0.6" stroke="#fff" x1="62.6" y1="29.2" x2="43.8" y2="47.8" transform="scale(0)" />
+                            </svg>
+                        </div>
+
+                        <div class="vlCtrl">
+                            <svg viewBox="0 0 90 14" xmlns="http://www.w3.org/2000/svg">
+                                <line id="ctrlLineB" class="volElem" stroke="#fff" x1="13" y1="7" x2="85.2" y2="7" opacity="0.3"/>
+                                <line id="ctrlLineF" class="volElem" stroke="#fff" x1="13" y1="7" x2="85.2" y2="7" opacity="0.9"/>
+                                <circle id="ctrlCirce" cx="85.2" cy="7" r="4" fill="#fff" />
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -144,6 +169,7 @@
 <script src="vendor/wavesurfer/plugin/wavesurfer.cursor.min.js"></script>
 
 <script src="assets/js/script.js"></script>
+<script src="vendor/volume/index.js"></script>
 </body>
 
 </html>
