@@ -1,3 +1,4 @@
+
 @media only screen and (max-width: 900px) {
     .player-box{
         overflow: hidden;
@@ -82,6 +83,26 @@
         opacity: 1;
         z-index: unset;
         top: 0;
+    }
+
+}
+@media only screen and (max-width: 370px) {
+    .player .controller .plist {
+        display: unset;
+        opacity: 1;
+        z-index: unset;
+        top: 0;
+        margin-top: 0 !important;
+        left: 60px;
+    }
+
+    .player .controller .repeat {
+        display: unset;
+        opacity: 1;
+        z-index: unset;
+        top: 0;
+        margin-top: 0 !important;
+        left: 30px;
     }
 
 }
