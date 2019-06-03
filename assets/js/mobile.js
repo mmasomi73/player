@@ -8,19 +8,18 @@ function resp() {
         // $('.vlCtrl svg #ctrlLineB').attr('x2',(width - (width * 0.1) - 128)).attr('y2',15).attr('y1',15);
         // $('.vlCtrl svg #ctrlLineF').attr('x2',(width - (width * 0.1) - 128)).attr('y2',15).attr('y1',15);
         // $('.vlCtrl svg #circle').attr('cx',(width - (width * 0.1) - 128)).attr('cy',15);
-    if (width <= 500){
-
+    if (width <= 900){
+        $('.plist').click(function () {
+            $('.playlist').toggleClass('shower');
+            $('.player').toggleClass('hider');
+        });
+        $('.playlist  .close').click(function () {
+            $('.playlist').toggleClass('shower');
+            $('.player').toggleClass('hider');
+        });
     }
 }
 
 $(window).ready(function() {
     resp();
-    $('.plist').click(function () {
-        $('.playlist').toggleClass('shower');
-        $('.player').toggleClass('hider');
-    });
-    $('.playlist  .repeat').click(function () {
-        $('.playlist').toggleClass('shower');
-        $('.player').toggleClass('hider');
-    });
 });

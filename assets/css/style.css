@@ -795,7 +795,9 @@ filter: blur(3px);
     color: #ffffff5e;
 }
 
-.player-box .playlist .playlist-header .shuffle,.player-box .playlist .playlist-header .repeat {
+.player-box .playlist .playlist-header .shuffle,
+.player-box .playlist .playlist-header .close,
+.player-box .playlist .playlist-header .repeat {
     float: right;
     margin: 5px;
     color: #ffffff5e;
@@ -814,7 +816,14 @@ filter: blur(3px);
 .player-box .playlist .playlist-header .repeat{
     background-image: url(../icons/repeat.png);
 }
-.player-box .playlist .playlist-header .shuffle:hover,.player-box .playlist .playlist-header .repeat:hover {
+.player-box .playlist .playlist-header .close{
+    display: none;
+    opacity: 0;
+    background-image: url(../icons/close.png);
+}
+.player-box .playlist .playlist-header .shuffle:hover,
+.player-box .playlist .playlist-header .close:hover,
+.player-box .playlist .playlist-header .repeat:hover {
     opacity: 1;
 }
 

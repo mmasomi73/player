@@ -84,6 +84,11 @@
         z-index: unset;
         top: 0;
     }
+    .player-box .playlist .playlist-header .close{
+        display: unset;
+        opacity: 0.4;
+        background-image: url(../icons/close.png);
+    }
 
 }
 @media only screen and (max-width: 370px) {
